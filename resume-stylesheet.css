@@ -1,0 +1,243 @@
+
+/* Generic CSS below */
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  color: purple;
+}
+
+.light-blue-bg {
+  background-color: #9ab3f5;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Side bar below */
+
+.side-bar-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 800px;
+  width: 20vw;
+}
+
+.education-section {
+  flex: 1.5;
+  border-bottom: 1px solid black;
+}
+
+.work-experience-section {
+  flex: 1;
+  border-bottom: 1px solid black;
+}
+
+header {
+  padding: 3vh 0;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #7579e7;
+  width: 20vw;
+}
+
+/* Side bar above */
+
+/* Large content below */
+
+main {
+  display: flex;
+}
+
+.large-content-flex {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 80vw;
+  padding: 0 10%;
+}
+
+.extracurricular-section {
+  flex: 1.5;
+  border-bottom: 1px solid black;
+}
+
+.relevant-coursework-section {
+  flex: 1.5;
+}
+
+/* Large content above */
+
+/* Top bar below */
+
+.top-bar-flexbox {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+}
+
+nav,
+.skills-section {
+  flex: 1;
+}
+
+nav {
+  border-right: 1px solid black;
+}
+
+/* Top bar above */
+
+/* CSS for nav and address below */
+
+nav ul li,
+address ul li {
+  color: black;
+  font-size: 1.2em;
+}
+
+nav h2,
+address p {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+nav,
+address {
+  text-align: center;
+}
+
+/* CSS for nav and address above */
+
+/* CSS for sections below */
+
+section {
+  text-align: center;
+}
+
+section ul li {
+  font-size: 1.5em;
+  font-family: monospace;
+  text-align: center;
+}
+
+/* CSS for sections above */
+
+/* Aside CSS below */
+
+aside {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+}
+
+aside figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+aside figure img {
+  width: 40%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+aside h2 {
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+
+/* Aside CSS above */
+
+@media (max-width: 1200px) {
+  main {
+    flex-direction: column;
+  }
+
+  .top-bar-flexbox {
+    flex-direction: row;
+    height: 450px;
+    width: 100vw;
+  }
+
+  .side-bar-flexbox {
+    flex-direction: column;
+    height: 700px;
+    width: 100vw;
+  }
+
+  .large-content-flex {
+    flex-direction: column;
+    height: 1000px;
+    width: 100vw;
+  }
+
+  aside {
+    flex-direction: column;
+    height: 400px;
+    width: 100vw;
+  }
+
+  header {
+    order: 1;
+    flex: 2;
+  }
+
+  .skills-section {
+    order: 2;
+  }
+
+  .work-experience-section {
+    width: 100vw;
+  }
+
+  .education-section {
+    width: 100vw;
+    border-top: 1px solid black;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-bar-flexbox {
+    flex-direction: column;
+    height: 700px;
+  }
+
+  header {
+    width: 100vw;
+    order: -1;
+    flex: 1;
+  }
+
+  .skills-section {
+    border-top: 1px solid black;
+  }
+
+  aside figure {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  aside figure img {
+    width: 80%;
+    height: 50%;
+  }
+}
